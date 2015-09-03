@@ -14,6 +14,6 @@ docker pull cannin/pcviz
 
 ## Run PCViz
 ```
-docker run --name pcviz -d -p 8080:8080 cannin/pcviz
+docker run --restart always --name pcviz -d -p 8080:8080 -t cannin/pcviz
 docker exec -t -i pcviz /bin/bash # Interactive shell
 ```
