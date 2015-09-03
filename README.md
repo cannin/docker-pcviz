@@ -1,5 +1,7 @@
 # Dockerfile for PCViz
 
+Pathway Commons PCViz source code: https://github.com/PathwayCommons/pcviz
+
 ## Local Build 
 docker build -t cannin/pcviz .
 
