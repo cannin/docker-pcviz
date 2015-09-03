@@ -16,7 +16,7 @@ RUN mkdir -p /data/pcviz
 
 RUN git clone https://github.com/PathwayCommons/pcviz.git
 
-RUN wget -O /pcviz/src/main/resources/spring/pcviz.properties https://gist.githubusercontent.com/cannin/0028e3713fe775d6fd4b/raw/pcviz.properties
+RUN wget -O /pcviz/src/main/resources/spring/pcviz.properties https://raw.githubusercontent.com/cannin/docker-pcviz/master/pcviz.properties
 
 RUN cd /pcviz; mvn clean install
 
