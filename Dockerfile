@@ -20,6 +20,11 @@ RUN wget -O /pcviz/src/main/resources/spring/pcviz.properties https://raw.github
 
 RUN cd /pcviz; mvn clean install
 
+# Add war file to tomcat and make root project
+RUN rm -rf /var/lib/tomcat7/webapps/ROOT
+RUN cp -f /pcviz/target/pcviz-*.war /var/lib/tomcat7/webapps/ROOT.war
+
+# NOTE: TEMPORARY HACK
 RUN cp -f /pcviz/target/pcviz-*.war /var/lib/tomcat7/webapps/pcviz.war
 
 # Expose the default tomcat port
